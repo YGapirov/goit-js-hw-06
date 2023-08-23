@@ -12,3 +12,50 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector(".gallery");
+
+const liArray = images.map(({url, alt}) => {
+  return `<li class="image-gallery">
+  <img src="${url}" alt="${alt}" width = "500px" height = "300px"/>
+  </li>`
+  
+});
+
+
+const markup = liArray.join('');
+list.insertAdjacentHTML('afterbegin', markup);
+
+console.log(list)
+
+
+
+// const list = document.querySelector('.js-list');
+
+// const liArray = cars.map(({ id, model, type, price, img }) => {
+//     return `<li>
+//     <img src="${img}" alt="${model}" width="300" />
+//     <h2>${model}</h2>
+//     <h3>${type}</h3>
+//     <span>${price}</span>
+//     </li>`
+// });
+
+// const markup = liArray.join('');
+// list.insertAdjacentHTML('afterbegin', markup);
+
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
+
+// const markup = technologies
+//   .map((technology) => `<li class="list-item">${technology}</li>`)
+//   .join("");
+
+// console.log(markup);
+
+
+// const div = document.querySelector('[data-id="area1"]');
+// console.log(div);
+
+// const list = document.querySelector('.js-list');
+// console.log(list.firstElementChild.t)

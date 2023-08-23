@@ -23,7 +23,10 @@ button {
   cursor: pointer;
 }
 
-/* button {
-  padding: 8px 12px;
-  cursor: pointer;
-} */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
