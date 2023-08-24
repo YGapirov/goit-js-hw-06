@@ -6,11 +6,30 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-for (const ingredient of ingredients) {
+
+const navList = document.querySelector('#ingredients');
+
+const liArray = ingredients.map((ingredient) => {
   const navItemEl = document.createElement("li");
   navItemEl.classList.add("item");
   navItemEl.textContent = ingredient;
-  console.log(navItemEl);
+  
+  return navItemEl;
+  
+});
 
-  document.body.appendChild(navItemEl);
-}
+
+navList.append(...liArray);
+
+console.log(navList);
+
+
+
+// for (const ingredient of ingredients) {
+//   const navItemEl = document.createElement("li");
+//   navItemEl.classList.add("item");
+//   navItemEl.textContent = ingredient;
+//   console.log(navItemEl);
+
+//   document.body.prependChild(navItemEl);
+// }
