@@ -1,27 +1,14 @@
-// Отримуємо посилання на елементи DOM за їх ідентифікаторами
-const counterElement = document.getElementById("counter");
+const btnMinus = document.querySelector('button[data-action="decrement"]');
+const btnPlus = document.querySelector('button[data-action="increment"]');
 const valueElement = document.getElementById("value");
 
-// Ініціалізуємо змінну для лічильника
-let counterValue = 0;
+let currentValue = 0;
 
-// Оновлюємо інтерфейс новим значенням лічильника
-function updateCounter() {
-  valueElement.textContent = counterValue;
-}
-
-// Додаємо прослуховувачів подій для кнопок
-counterElement.addEventListener("click", (event) => {
-  const action = event.target.dataset.action;
-
-  if (action === "increment") {
-    counterValue++;
-  } else if (action === "decrement") {
-    counterValue--;
-  }
-
-  updateCounter(); // Оновлюємо інтерфейс після зміни значення лічильника
+btnMinus.addEventListener("click", () => {
+  currentValue -= 1;
+  valueElement.textContent = currentValue; //виводимо поточне значення valueElement = -1 по кліку
 });
-
-// Ініціалізуємо початкове значення лічильника
-updateCounter();
+btnPlus.addEventListener("click", () => {
+  currentValue += 1;
+  valueElement.textContent = currentValue; //виводимо поточне значення valueElement = +1 по кліку
+});
