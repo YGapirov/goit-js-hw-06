@@ -7,7 +7,7 @@ const ingredients = [
   "Condiments",
 ];
 
-const navList = document.querySelector('#ingredients');
+const navList = document.getElementById('ingredients');
 
 const liArray = ingredients.map((ingredient) => {
   const navItemEl = document.createElement("li");
