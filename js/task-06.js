@@ -4,7 +4,7 @@ textInput.addEventListener("blur", (evt) => {
   const checkLength = Number(textInput.getAttribute("data-length"));
 
   textInput.classList.remove("valid", "invalid");
-  textInput.classList.add(inputLength === checkLength ? "valid" : "invalid");
+  textInput.classList.add(inputLength === checkLength ? "valid" : "invalid"); //тернарний
 });
 
 console.log(textInput);
