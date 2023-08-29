@@ -9,7 +9,8 @@ const changeColor = document.querySelector('.change-color');
 const bodyColor = document.querySelector('body');
 
 changeColor.addEventListener('click', () => {
-  // const randomColor = getRandomHexColor();   //виклакаємо функцію випадковий колір
+  
+  const randomColor = getRandomHexColor();   //виклакаємо функцію випадковий колір
   bodyColor.style.background = getRandomHexColor();  //назначаємо бекграунду рандомний колір при кліку
   colorSpan.textContent = getRandomHexColor();   //додаєм в спан назву кольору
 });
